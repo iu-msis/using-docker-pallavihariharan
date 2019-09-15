@@ -18,31 +18,33 @@
   </div>
 </head>
 <body class=body>
-  <div class="container" style="margin-top:60px">
-    <center><img src="img/MD4.webp"><br>
+  <div id="userData" class="container" style="margin-top:60px">
+    <center><img v-bind:src="users.picture.thumbnail"><br>
     <cite>Source:Shutter Stock</cite></center>
     <table class="table table-hover intro">
       <tr>
         <td><b>Name</b></td>
-        <td class=intro>Mr. Masala Dosa</td>
+        <td class=intro>{{ users.name.first }} {{ users.name.last }}</td>
       </tr>
       <tr>
-        <td><b>Origin</b></td>
-        <td class=intro>South India</td>
+        <td><b>Country of Origin</b></td>
+        <td class=intro>{{ users.nat }}</td>
       </tr>
       <tr>
         <td><b>Birthdate</b></td>
-        <td class=intro>1st Century A.D.</td>
+        <td class=intro>{{ users.dob.date }}</td>
       </tr>
       <tr>
         <td><b>Age</b></td>
-        <td class=intro>2019</td>
+        <td class=intro>{{ users.dob.age }}</td>
       </tr>
       <tr>
         <td><b>Email Address</b></td>
-        <td class=intro><a href="mailto:ilovesambarchutney@dosas.com" target="_blank">Email me at ilovesambarchutney@dosas.com</a>
+        <td class=intro><a href="mailto:{{ users.email }}" target="_blank">Email me at {{ users.email }}</a>
       </tr>
     </table>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/user.app.js"></script>
 </body>
 </html>
