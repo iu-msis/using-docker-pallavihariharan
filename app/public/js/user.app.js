@@ -1,4 +1,4 @@
- /*jshint esversion: 6 */
+  /*jshint esversion: 6 */
 var userApp = new Vue({
   el: '#userData',
   data: {
@@ -28,7 +28,7 @@ var userApp = new Vue({
       // Means the same at this
       fetch('https://randomuser.me/api/')
       .then(response => response.json() )
-      .then(json => {userApp.users = json.results[0]});
+      .then(json => {userApp.users = json.results[0];});
 
         //.then(function(json) {waitingApp.people = json});
 
